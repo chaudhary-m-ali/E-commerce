@@ -9,3 +9,7 @@ body {
   font-style: normal;
   font-weight: 500;
 }
+.dark {
+  background-color: black;
+  color: white;
+}

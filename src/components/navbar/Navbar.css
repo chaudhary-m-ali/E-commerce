@@ -3,6 +3,10 @@
   justify-content: space-around;
   padding: 16px;
   box-shadow: 0 1px 3px -2px black;
+  align-items: center;
+}
+html.dark .navbar {
+  box-shadow: 0 1px 3px -2px white;
 }
 .nav-logo {
   display: flex;
@@ -14,6 +18,10 @@
   font-size: 22px;
   font-weight: 600;
 }
+html.dark .nav-logo p {
+  color: white;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;

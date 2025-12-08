@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.webp";
 import cart_icon from "../../assets/cart_icon.png";
 import { Link } from "react-router-dom";
+import ToggleTheme from "../toggleTheme/ToggleTheme";
+import { ThemeDataContext } from "../context/ThemeContext";
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const { theme } = useContext(ThemeDataContext);
   return (
     <div className="navbar">
       <div className="nav-logo">
@@ -17,7 +20,13 @@ const Navbar = () => {
             setMenu("home");
           }}
         >
-          <Link to="/" style={{ textDecoration: "none", color: "  #626262" }}>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              color: theme === "dark" ? "white" : "#626262",
+            }}
+          >
             Home
           </Link>
           {menu === "home" ? <hr /> : <></>}
@@ -29,7 +38,10 @@ const Navbar = () => {
         >
           <Link
             to="mens"
-            style={{ textDecoration: "none", color: "  #626262" }}
+            style={{
+              textDecoration: "none",
+              color: theme === "dark" ? "white" : "#626262",
+            }}
           >
             Men
           </Link>
@@ -42,7 +54,10 @@ const Navbar = () => {
         >
           <Link
             to="/womens"
-            style={{ textDecoration: "none", color: "  #626262" }}
+            style={{
+              textDecoration: "none",
+              color: theme === "dark" ? "white" : "#626262",
+            }}
           >
             {" "}
             Women
@@ -56,22 +71,43 @@ const Navbar = () => {
         >
           <Link
             to="kids"
-            style={{ textDecoration: "none", color: "  #626262" }}
+            style={{
+              textDecoration: "none",
+              color: theme === "dark" ? "white" : "#626262",
+            }}
           >
             Kids
           </Link>
           {menu === "Kids" ? <hr /> : <></>}
         </li>
       </ul>
+      <ToggleTheme />
       <div className="nav-login-cart">
         <Link
           to="/login"
-          style={{ textDecoration: "none", color: "  #626262" }}
+          style={{
+            textDecoration: "none",
+            color: theme === "dark" ? "white" : "#626262",
+          }}
         >
           <button>Login</button>
         </Link>
-        <Link to="/cart" style={{ textDecoration: "none", color: "  #626262" }}>
-          <img src={cart_icon} alt="cart_icon" height={40} />
+        <Link
+          to="/cart"
+          style={{
+            textDecoration: "none",
+            color: theme === "dark" ? "white" : "#626262",
+          }}
+        >
+          <img
+            src={cart_icon}
+            alt="cart_icon"
+            height={40}
+            style={{
+              filter: theme === "dark" ? "invert(1)" : "",
+              zIndex: -100,
+            }}
+          />
         </Link>
         <div className="nav-cart-count">0</div>
       </div>

@@ -16,12 +16,18 @@
   color: #383838;
   font-weight: 700;
 }
+html.dark p {
+  color: white;
+}
 .footer-links {
   display: flex;
   list-style: none;
   gap: 50px;
   color: #252525;
   font-size: 20px;
+}
+html.dark .footer-links {
+  color: white;
 }
 .footer-links li {
   cursor: pointer;

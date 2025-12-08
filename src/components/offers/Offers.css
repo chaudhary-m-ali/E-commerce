@@ -8,6 +8,10 @@
   margin-bottom: 150px;
   background: linear-gradient(180deg, #e1ffea22, #47fdae 60%);
 }
+html.dark .offers {
+  background: black;
+  border: 1px solid white;
+}
 .offers-left {
   flex: 1;
   display: flex;
@@ -35,6 +39,7 @@
   margin-top: 30px;
   cursor: pointer;
 }
+
 .offers-right {
   flex: 1;
   display: flex;

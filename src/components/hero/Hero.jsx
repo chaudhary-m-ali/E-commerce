@@ -16,7 +16,12 @@ const Hero = () => {
         <p>for everone</p>
         <div className="hero-latest-btn">
           <div>latest collection</div>
-          <img src={arrow_icon} alt="arrow_icon" height={30} />
+          <img
+            src={arrow_icon}
+            alt="arrow_icon"
+            height={30}
+            style={{ filter: "invert(1)" }}
+          />
         </div>
       </div>
       <div className="hero-right">

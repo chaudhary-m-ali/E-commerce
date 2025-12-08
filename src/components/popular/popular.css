@@ -16,6 +16,9 @@
   border-radius: 10px;
   background: #252525;
 }
+html.dark .popular hr {
+  background: white;
+}
 .popular-item {
   margin-top: 50px;
   display: flex;

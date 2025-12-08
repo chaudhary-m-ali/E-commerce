@@ -3,6 +3,9 @@
   background: linear-gradient(180deg, #47fdae, #e1ffea22 60%);
   display: flex;
 }
+html.dark .hero {
+  background: black;
+}
 .hero-left {
   flex: 1;
   display: flex;
@@ -20,10 +23,16 @@
   font-size: 20px;
   font-weight: 600;
 }
+html.dark h2 {
+  color: white;
+}
 .hero-left p {
   color: #171717;
   font-size: 60px;
   font-weight: 700;
+}
+html.dark .hero-left p {
+  color: white;
 }
 .hero-latest-btn {
   display: flex;
