@@ -5,9 +5,11 @@ import cart_icon from "../../assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import ToggleTheme from "../toggleTheme/ToggleTheme";
 import { ThemeDataContext } from "../context/ThemeContext";
+import { ShopDataContext } from "../context/ShopContext";
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
   const { theme } = useContext(ThemeDataContext);
+  const { getTotalCartItem } = useContext(ShopDataContext);
   return (
     <div className="navbar">
       <div className="nav-logo">
@@ -109,7 +111,7 @@ const Navbar = () => {
             }}
           />
         </Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{getTotalCartItem()}</div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ html.dark .loginsignup {
 
 .loginsignup-container {
   width: 500px;
-  height: 500px;
+  height: 550px;
   background: white;
   margin: auto;
   padding: 40px 60px;
@@ -66,12 +66,13 @@ html.dark h1 {
 }
 .loginsignup-container button {
   width: 400px;
-  height: 50px;
+  height: 40px;
   color: white;
   background-color: #ff4141;
-  margin-top: 30px;
+  margin-top: 10px;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  border-radius: 20px;
 }

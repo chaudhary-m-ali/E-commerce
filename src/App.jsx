@@ -10,9 +10,11 @@ import Footer from "./components/footer/Footer";
 import men_banner from "./assets/banner.jpg";
 import women_banner from "./assets/women_banner.avif";
 import kids_banner from "./assets/kids_banner.jpg";
+import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
     <div>
+      <Toaster />
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -29,8 +31,7 @@ const App = () => {
             path="/kids"
             element={<ShopCategory category="kid" banner={kids_banner} />}
           />
-          <Route path="/product" element={<Product />} />
-          <Route path=":productId" element={<Product />} />
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
